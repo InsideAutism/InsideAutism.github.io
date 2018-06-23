@@ -2,6 +2,7 @@
 layout: default
 ref: index
 lang: de
+permalink: /de/home/
 ---
 
 <div class="home">
@@ -14,6 +15,17 @@ lang: de
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="post-list">
+    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %}
+    {% for page in pages %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         </h2>
       </li>
     {% endfor %}

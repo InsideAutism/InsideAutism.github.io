@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Über AutismAtWork
-permalink: /ueber/
+permalink: /de/about/
 ref: about
 lang: de
+header: true
+order: 1000
 ---
 
 AutismAtWork ist ein Projekt, gestartet durch einen Autisten, mit dem Ziel die Mauern zwischen "uns" und "normalen" Menschen zu reduzieren.

@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "About Autism"
+permalink: /en/about-autism/
 ref: aboutAutism
 lang: en
+order: 10
 ---
 # What is autism?
 Autism is a developmental disorder characterized by troubles with social interaction and communication, and by restricted and repetitive behavior. Parents usually notice signs in the first two or three years of their child's life. These signs often develop gradually, though some children with autism reach their developmental milestones at a normal pace and then worsen.

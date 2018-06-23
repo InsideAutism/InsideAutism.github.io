@@ -1,9 +1,11 @@
 ---
 layout: page
 title: About AutismAtWork
-permalink: /about/
+permalink: /en/about/
 ref: about
 lang: en
+order: 1000
+header: true
 ---
 
 AutismAtWork is a project initated by an autistic person, trying to remove the 

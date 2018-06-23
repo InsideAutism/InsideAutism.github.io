@@ -15,7 +15,7 @@ description:
   de: Wie man mit Autisten zusammen arbeitet
 index:
   en:
-  de: home.html
+  de: de/home/
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://autismatwork.github.io" # the base hostname & protocol for your site
 github_username:  AutismAtWork

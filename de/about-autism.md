@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Über Autismus"
+permalink: /de/about-autism/
 ref: aboutAutism
 lang: de
+order: 10
 ---
 # Was ist Autismus?
 Autismus ist eine tiefgreifende Entwicklungsstörung, die als Autismus-Spektrum-Störung diagnostiziert wird. Diese tritt in der Regel vor dem dritten Lebensjahr auf und zeigt sich in drei Bereichen:

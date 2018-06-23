@@ -2,7 +2,9 @@
 layout: post
 title:  "Die ideale Umgebung"
 ref: perfectWorkplace
+permalink: /de/perfectWorkplace/
 lang: de
+order: 100
 ---
 
 # Die ideale Umgebung für einen Autisten
