@@ -6,27 +6,53 @@ lang: en
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Welcome!</h1>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>
+      What comes to mind first when asked about "autism"?
+      <br> Right: The film Rainman, people with very poor social skills, but with
+      island talents, people who require permanent support.
+    </p>
+
+    <p>
+      We, a group of autistic and non-autistic people, want to correct this wrong picture
+      in the minds of many people.
+    </p>
+
+    <p>
+      In fact, it is only this wrong impression of us that makes our lives unnecessarily
+      complicated. We're no different from you.
+    </p>
+
+    <p>
+      Did you know that (estimated) 1.1% of humanity is autistic? So roughly: one in 100
+      people is an autistic. How many people have you met without noticing?
+    </p>
+
+    <p>
+      On the following pages you will find a lot of information about autism, about the
+      differences between you and "us", and above all how we can benefit from each
+      other.
+    </p>
+
+    <p>And very important: Thank you! Thank you for your interest!</p>
+  </div>
+
+
+
+
+
+  <h1 class="page-heading">Pages</h1>
 
   <ul class="post-list">
-    {% assign posts=site.posts | where:"lang", page.lang %}
-    {% for post in posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <ul class="post-list">
-    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %}
-    {% for page in pages %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </h2>
-      </li>
+    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %} {% for page
+    in pages %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </h2>
+    </li>
     {% endfor %}
   </ul>
 </div>

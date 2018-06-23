@@ -7,27 +7,47 @@ permalink: /de/home/
 
 <div class="home">
 
-  <h1 class="page-heading">Beiträge</h1>
+  <h1 class="page-heading">Willkommen!</h1>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Was kommt dir als erstes in den Sinn, wenn du nach "Autismus" gefragt wirst?
+      <br>Richtig: Der Film Rainman, Personen mit sehr mangelhaften sozialen Fertigkeiten,
+      aber dafür mit Inselbegabungen, Menschen, die eine permanente Unterstützung
+      erfordern.
+    </p>
+
+    <p>Wir, eine Gruppe von Autisten und nicht-Autisten, wollen hier dieses falsche
+      Bild in den Köpfen vieler Menschen korrigieren.
+    </p>
+
+    <p>Eigentlich ist es tatsächlich so, dass erst dieser falsche Eindruck von uns unser
+      Leben unnötig kompliziert gestaltet. So sehr unterscheiden wir uns gar nicht
+      von euch.
+    </p>
+
+    <p>Wusstest du, dass (geschätzt) 1,1% der Menschheit Autisten sind? Also grob: einer
+      von 100 Menschen ist ein Autist. Wie vielen magst du schon begegnet sein, ohne
+      dass dir etwas aufgefallen wäre?
+    </p>
+
+    <p>Auf den folgenden Seiten findest du sehr viele Informationen zum Thema Autismus,
+      zu den Unterschieden zwischen euch und "uns", und vor allem wie wir voneinander
+      profitieren können.
+    </p>
+
+    <p>Und ganz wichtig: Danke! Danke für dein Interesse!</p>
+  </div>
+
+  <h1 class="page-heading">Seiten</h1>
 
   <ul class="post-list">
-    {% assign posts=site.posts | where:"lang", page.lang %}
-    {% for post in posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <ul class="post-list">
-    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %}
-    {% for page in pages %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </h2>
-      </li>
+    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %} {% for page
+    in pages %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </h2>
+    </li>
     {% endfor %}
   </ul>
 
