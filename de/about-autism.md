@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Über Autismus"
+title:  "Über Autismus (Wikipedia)"
 permalink: /de/about-autism/
 ref: aboutAutism
 lang: de

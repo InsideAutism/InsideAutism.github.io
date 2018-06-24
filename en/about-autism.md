@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "About Autism"
+title:  "About Autism (wikipedia)"
 permalink: /en/about-autism/
 ref: aboutAutism
 lang: en
