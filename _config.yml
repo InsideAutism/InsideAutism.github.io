@@ -7,18 +7,18 @@
 
 # Site settings
 title:
-  en: AutismAtWork
-  de: AutismAtWork
+  en: InsideAutism
+  de: InsideAutism
 email: max06.net@gmail.com
 description:
-  en: How to work with autistic people
-  de: Wie man mit Autisten zusammen arbeitet
+  en: Autism inside - how to work with autistic people
+  de: Autism inside - wie man mit Autisten zusammen arbeitet
 index:
   en:
   de: de/home/
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://autismatwork.github.io" # the base hostname & protocol for your site
-github_username:  AutismAtWork
+url: "http://insideAutism.github.io" # the base hostname & protocol for your site
+github_username:  InsideAutism
 
 # Build settings
 markdown: kramdown
