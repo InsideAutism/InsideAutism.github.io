@@ -40,19 +40,4 @@ lang: en
   </div>
 
 
-
-
-
-  <h1 class="page-heading">Pages</h1>
-
-  <ul class="post-list">
-    {% assign pages=site.pages | where:"lang", page.lang | sort:"order" %} {% for page
-    in pages %}
-    <li>
-      <h2>
-        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-      </h2>
-    </li>
-    {% endfor %}
-  </ul>
 </div>
