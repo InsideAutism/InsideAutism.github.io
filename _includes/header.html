@@ -1,36 +1,75 @@
-<header class="site-header">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <!-- Insert Logo here -->
+  </a>
 
-  <div class="wrapper">
+  <a class="navbar-brand" href="{{ site.baseurl }}/{{ site.index[page.lang] }}">
+    {{ site.title[page.lang] }}
+  </a>
 
-    <a class="site-title" href="{{ site.baseurl }}/{{ site.index[page.lang] }}">{{ site.title[page.lang] }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
 
-      <div class="trigger">
-        {% assign pages=site.pages | where:"lang", page.lang | where:"header", true %}
-        {% for my_page in pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+            Inhalt
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {% assign pages=site.pages | where:"lang", page.lang | where:"header", false | sort:"order" %}
+          {% for p in pages %}
+            {% if p.title %}
+              <a class="dropdown-item {% if p.url == page.url %}active{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+            {% endif %}
+          {% endfor %}
+          <!-- separator and additional items -->
+          <!-- <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </li>
+
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+
+      <!-- disabled menu item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
+
+    </ul>
+
+    <!-- language selector -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+            {{ site.language[page.lang] }}
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %} {% for p in
+          pages %}
+          <a class="dropdown-item" href="{{ p.url | prepend: site.baseurl }}">{{ site.language[p.lang] }}</a>          {% endfor %}
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+      {% assign pages=site.pages | where:"lang", page.lang | where:"header", true %} {%
+      for p in pages %} {% if p.title %}
+      <li class="nav-item">
+        <a class="nav-link {% if p.url == page.url %}active{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
 
   </div>
-
-</header>
-
-<div class="wrapper" style="text-align: right; line-height: 2em">
-  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-  {% for post in posts %} <a href="{{ post.url | prepend: site.baseurl }}" class="{{ post.lang }}">{{ post.lang }}</a> {% endfor %}
-
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %} <a href="{{ page.url | prepend: site.baseurl }}" class="{{ page.lang }}">{{ page.lang }}</a> {% endfor %}
-</div>
+</nav>
