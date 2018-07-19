@@ -19,6 +19,14 @@ index:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://insideAutism.github.io" # the base hostname & protocol for your site
 github_username:  InsideAutism
+github_repository: InsideAutism.github.io
+twitter_username: max06de
 
 # Build settings
 markdown: kramdown
+
+defaults:
+  - scope:
+      type: "pages"
+    values:
+      header: false
