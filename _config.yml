@@ -28,7 +28,7 @@ twitter_username: max06de
 # Build settings
 markdown: kramdown
 
-remote_theme: pmarsceill/just-the-docs
+remote_theme: pmarsceill/just-no-docs
 
 defaults:
   - scope:
